@@ -85,7 +85,7 @@ REDIRECT_URI = os.environ.get("GOOGLE_REDIRECT_URI")
 # -------------------------------
 
 @app.get("/", response_class=HTMLResponse)
-@app.get("/", response_class=HTMLResponse)
+
 def index():
     return """
     <html>
@@ -124,10 +124,11 @@ def index():
         <h2>🎥 Demo Video</h2>
 
         <iframe width="800" height="450"
-            src="https://youtu.be/1stDRZrML5o"
-            frameborder="0"
-            allowfullscreen>
-        </iframe>
+    src="https://www.youtube.com/embed/1stDRZrML5o"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen>
+     </iframe>
 
     </body>
     </html>
