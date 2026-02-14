@@ -85,10 +85,52 @@ REDIRECT_URI = os.environ.get("GOOGLE_REDIRECT_URI")
 # -------------------------------
 
 @app.get("/", response_class=HTMLResponse)
+@app.get("/", response_class=HTMLResponse)
 def index():
     return """
-    <h2>YouTube Research</h2>
-    <p><a href="/login">Connect your YouTube</a></p>
+    <html>
+    <head>
+        <title>YouTube Research Tool</title>
+        <style>
+            body {
+                font-family: Arial;
+                text-align: center;
+                padding: 40px;
+                background-color: #f5f5f5;
+            }
+            .btn {
+                padding: 12px 25px;
+                background-color: #ff0000;
+                color: white;
+                text-decoration: none;
+                border-radius: 8px;
+                font-weight: bold;
+            }
+            iframe {
+                margin-top: 30px;
+                border-radius: 12px;
+                box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            }
+        </style>
+    </head>
+    <body>
+
+        <h1>YouTube Subscription Research Tool</h1>
+
+        <p>
+            <a href="/login" class="btn">Connect your YouTube</a>
+        </p>
+
+        <h2>🎥 Demo Video</h2>
+
+        <iframe width="800" height="450"
+            src="https://youtu.be/1stDRZrML5o"
+            frameborder="0"
+            allowfullscreen>
+        </iframe>
+
+    </body>
+    </html>
     """
 
 @app.get("/login")
