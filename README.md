@@ -67,7 +67,6 @@ Enable:
 Create OAuth credentials (Web Application) and configure:
 	•	Authorized redirect URI:
 
-https://your-domain.com/oauth2callback
 
 
 
@@ -104,7 +103,7 @@ uvicorn main:app --reload
 
 3️⃣ Open in browser
 
-http://127.0.0.1:8000
+
 
 
 ⸻
